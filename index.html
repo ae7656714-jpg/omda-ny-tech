@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Omda--Ny tech | أنظمة الكاشير والتشغيل والإدارة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050a14;--panel:#0b1626;--line:#16304d;--cy:#5cd6ff;--cy2:#2f9fe0;--tx:#f4f8ff;--mu:#9db4cc;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#050a14}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}
+.w{max-width:1100px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:700;font-size:20px;direction:ltr}
+.logo span{color:var(--cy)}
+nav{display:flex;gap:22px;color:var(--mu);font-size:15px}
+nav a:hover{color:var(--cy)}
+.btn{display:inline-block;background:var(--cy);color:#04101c;font-weight:700;padding:11px 24px;border-radius:8px;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn.o{background:transparent;color:var(--cy);border:1px solid var(--cy2)}
+.btn:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--cy);outline-offset:3px}
+.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.35;margin:0 0 16px}
+.hero p{color:var(--mu);font-size:18px;max-width:34em;margin:0 0 26px}
+.slogan{display:inline-block;border:1px solid var(--line);color:var(--cy);padding:4px 16px;border-radius:99px;margin-bottom:20px;font-size:15px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.pick{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+.pick h2{margin:0 0 14px;font-size:19px}
+label{display:block;color:var(--mu);font-size:14px;margin:12px 0 4px}
+select{width:100%;background:#07111f;color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit}
+#res{margin-top:18px;border-top:1px solid var(--line);padding-top:14px;min-height:60px}
+#res h3{margin:0 0 4px;color:var(--cy);font-size:18px}
+#res p{margin:2px 0;color:var(--mu);font-size:14px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:28px;margin:0 0 24px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.c{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+.c h3{margin:0 0 6px;font-size:17px;color:var(--cy)}
+.c p{margin:0;color:var(--mu);font-size:14px}
+.c .t{display:inline-block;margin-top:8px;font-size:13px;color:var(--tx);background:#10263f;padding:2px 10px;border-radius:99px}
+.wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:520px}
+th,td{padding:12px;border-bottom:1px solid var(--line);text-align:right;font-size:14px}
+th{color:var(--cy)}
+details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:500}
+details p{color:var(--mu);margin:8px 0 0;font-size:14px}
+.note{color:var(--mu);font-size:13px;margin-top:14px}
+input{width:100%;background:#07111f;color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:10px;font:inherit}
+.wa{display:block;text-align:center;margin-top:16px}
+.fab{position:fixed;inset-inline-start:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--cy);color:#04101c;font-weight:700;padding:12px 20px;border-radius:99px;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.5)}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mu);font-size:14px;text-align:center}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:40px}nav{display:none}}
+</style>
+</head>
+<body>
+<header><div class="w"><a class="logo" href="#">Omda<span>--</span>Ny tech</a>
+<nav><a href="#sectors">القطاعات</a><a href="#modes">طرق التشغيل</a><a href="#license">التراخيص</a><a href="#faq">الأسئلة الشائعة</a></nav>
+<a class="btn o" href="#pick">اختر نظامك</a></div></header>
+
+<main class="w">
+<div class="hero">
+<div>
+<span class="slogan">تميّزنا سرّ تفوّقنا</span>
+<h1>كل أنظمة تشغيل وإدارة أعمالك… في مكان واحد</h1>
+<p>حلول ذكية للكاشير والتشغيل والإدارة، مصممة لتناسب نشاطك، وتعمل على الكمبيوتر والموبايل، مع إمكانية الوصول إلى بياناتك من أي مكان.</p>
+<div class="cta"><a class="btn" href="#sectors">اكتشف الأنظمة</a><a class="btn o" href="#pick">اختر نظام نشاطك</a><a class="btn o" href="#faq">اطلب نظامًا مخصصًا</a></div>
+</div>
+<div class="pick" id="pick">
+<h2>اعرف النظام المناسب لك</h2>
+<label for="a">طبيعة النشاط</label>
+<select id="a"><option value="rest">مطعم أو كافيه</option><option value="shop">محل أو سوبر ماركت</option><option value="salon">مشغل أو مركز تجميل</option><option value="dist">شركة توزيع</option><option value="fact">مصنع</option><option value="corp">شركة كبيرة</option><option value="wh">مخازن وشحن</option><option value="clinic">عيادة أو مركز خدمات</option><option value="edu">مركز تدريب أو تعليم</option><option value="svc">شركة صيانة وخدمات</option></select>
+<label for="b">ما الذي تحتاجه؟</label>
+<select id="b"><option value="pos">كاشير</option><option value="ops">تشغيل يومي</option><option value="full">إدارة متكاملة</option></select>
+<label for="c">عدد الفروع</label>
+<select id="c"><option value="1">فرع واحد</option><option value="n">عدة فروع</option></select>
+<label for="d">أين ستستخدمه؟</label>
+<select id="d"><option value="pc">كمبيوتر</option><option value="mob">موبايل</option><option value="both">الاثنان</option></select>
+<label for="e">هل تحتاج قاعدة بيانات سحابية؟</label>
+<select id="e"><option value="no">لا، محلي</option><option value="yes">نعم</option></select>
+<label for="nm">اسمك (اختياري)</label>
+<input id="nm" autocomplete="name">
+<div id="res" aria-live="polite"></div>
+<a class="btn wa" id="wa" href="https://wa.me/201127553859" target="_blank" rel="noopener" onclick="upd()">أرسل طلبك عبر واتساب</a>
+</div>
+</div>
+
+<section id="sectors"><h2>أنظمة لكل نشاط</h2>
+<div class="g">
+<div class="c"><h3>المطاعم والكافيهات</h3><p>كاشير، طاولات، مطبخ، منيو، توصيل وفروع.</p></div>
+<div class="c"><h3>المحلات والسوبر ماركت</h3><p>نقاط بيع، باركود، مخزون، عروض وورديات.</p></div>
+<div class="c"><h3>المشاغل ومراكز التجميل</h3><p>حجوزات، عملاء، خدمات وموظفون.</p></div>
+<div class="c"><h3>شركات التوزيع</h3><p>مندوبون، خطوط سير، طلبيات وتحصيلات.</p></div>
+<div class="c"><h3>المصانع</h3><p>إنتاج، مواد خام، مراحل تصنيع ومخزون.</p></div>
+<div class="c"><h3>الشركات الكبيرة</h3><p>موظفون، فروع، موافقات وصلاحيات.</p></div>
+<div class="c"><h3>المخازن والشحن</h3><p>استلام وتسليم، حركة مخزون وتتبع.</p></div>
+<div class="c"><h3>العيادات والخدمات</h3><p>مواعيد، ملفات عملاء ومدفوعات.</p></div>
+<div class="c"><h3>التدريب والتعليم</h3><p>تسجيل، جداول، حضور واشتراكات.</p></div>
+<div class="c"><h3>الصيانة والخدمات</h3><p>طلبات، مهام، متابعة تنفيذ وفواتير.</p></div>
+</div></section>
+
+<section id="modes"><h2>طرق التشغيل</h2>
+<div class="g">
+<div class="c"><h3>نسخة الكمبيوتر</h3><p>برنامج Windows مع دعم الطابعات والباركود، ويعمل دون إنترنت إذا كان النظام يدعم ذلك.</p></div>
+<div class="c"><h3>تطبيق الموبايل</h3><p>Android، وiPhone عند توفره. واجهة مصممة للهاتف ومزامنة مع النظام الرئيسي.</p></div>
+<div class="c"><h3>سحابي</h3><p>من المتصفح، مع فروع متعددة وقاعدة بيانات خارج أجهزتك.</p></div>
+<div class="c"><h3>هجين</h3><p>عمل محلي عند انقطاع الإنترنت ثم مزامنة عند عودته.</p></div>
+</div>
+<p class="note">ليست كل الأنظمة تدعم كل الطرق. تظهر الطرق المتاحة فعليًا في صفحة كل نظام.</p></section>
+
+<section id="license"><h2>التراخيص والتسليم</h2>
+<div class="wrap"><table>
+<tr><th>الخيار</th><th>المناسب لـ</th><th>ما يشمله</th></tr>
+<tr><td>اشتراك شهري</td><td>بداية بتكلفة منخفضة</td><td>التحديثات والدعم طوال الاشتراك</td></tr>
+<tr><td>اشتراك سنوي</td><td>نشاط مستقر</td><td>التحديثات والدعم لمدة سنة</td></tr>
+<tr><td>مدى الحياة</td><td>الأنظمة التي تدعمه</td><td>يُوضَّح لكل نظام: الإصدار الحالي أو التحديثات، الموبايل، عدد الأجهزة والفروع</td></tr>
+<tr><td>مخصص</td><td>الشركات والمؤسسات</td><td>تطوير وتكاملات بموعد تسليم متفق عليه</td></tr>
+</table></div>
+<p class="note">الأنظمة الجاهزة تُسلَّم خلال ساعات من تأكيد الطلب. رسوم الاستضافة السحابية والدعم منفصلة عن ترخيص البرنامج.</p></section>
+
+<section id="faq"><h2>أسئلة شائعة</h2>
+<details><summary>هل أستطيع شراء نظام واحد فقط؟</summary><p>نعم. يمكنك شراء نظام مستقل أو مجموعة وحدات حسب احتياجك.</p></details>
+<details><summary>أين تُحفظ بياناتي في النظام السحابي؟</summary><p>في قاعدة بيانات مُدارة خارج أجهزتك، مع فصل بيانات كل شركة عن غيرها.</p></details>
+<details><summary>كيف أطلب نظامًا مخصصًا؟</summary><p>تواصل مع مستشار المبيعات، وسنتفق معك على نطاق العمل وموعد التسليم.</p></details>
+</section>
+</main>
+<footer>Omda--Ny tech — تميّزنا سرّ تفوّقنا</footer>
+<a class="fab" href="https://wa.me/201127553859?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A3%D9%86%D8%B8%D9%85%D8%A9%20Omda--Ny%20tech" target="_blank" rel="noopener">تواصل واتساب</a>
+
+<script>
+var N={rest:"المطاعم والكافيهات",shop:"المحلات والسوبر ماركت",salon:"المشاغل والتجميل",dist:"شركات التوزيع",fact:"المصانع",corp:"الشركات الكبيرة",wh:"المخازن والشحن",clinic:"العيادات والخدمات",edu:"التدريب والتعليم",svc:"الصيانة والخدمات"};
+var K={pos:"نظام كاشير",ops:"نظام تشغيل يومي",full:"نظام إدارة متكاملة"};
+function upd(){
+ var g=function(i){return document.getElementById(i).value};
+ var a=g("a"),b=g("b"),c=g("c"),d=g("d"),e=g("e");
+ var big=(a==="corp"||a==="fact"||c==="n");
+ var mode=e==="yes"?(d==="pc"?"هجين":"سحابي"):(d==="mob"?"تطبيق موبايل":"نسخة كمبيوتر");
+ var t=(b==="full"||big)?"3 إلى 5 أيام مع الإعداد":"خلال ساعات من تأكيد الطلب";
+ if(a==="corp"||a==="fact")t="موعد متفق عليه (نظام مخصص غالبًا)";
+ document.getElementById("res").innerHTML=
+ "<h3>"+K[b]+" لـ"+N[a]+"</h3>"+
+ "<p>طريقة التشغيل: "+mode+"</p>"+
+ "<p>الفروع: "+(c==="1"?"فرع واحد":"باقة متعددة الفروع")+"</p>"+
+ "<p>التسليم المتوقع: "+t+"</p>"+
+ "<p>السعر: يُحدَّد حسب الباقة بعد ربط الكتالوج.</p>";
+ var s=function(i){var x=document.getElementById(i);return x.options[x.selectedIndex].text};
+ var nm=document.getElementById("nm").value.trim();
+ var m="مرحبًا Omda--Ny tech، أريد الاستفسار عن نظام.\n"+(nm?"الاسم: "+nm+"\n":"")+"النشاط: "+s("a")+"\nالاحتياج: "+s("b")+"\nالفروع: "+s("c")+"\nالاستخدام: "+s("d")+"\nقاعدة بيانات سحابية: "+s("e")+"\nالنظام المقترح: "+K[b]+" لـ"+N[a]+" ("+mode+")";
+ document.getElementById("wa").href="https://wa.me/201127553859?text="+encodeURIComponent(m);
+}
+["a","b","c","d","e"].forEach(function(i){document.getElementById(i).addEventListener("change",upd)});
+upd();
+</script>
+</body>
+</html>
