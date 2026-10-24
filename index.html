@@ -126,11 +126,35 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 @keyframes waGlow{0%,100%{box-shadow:0 0 10px rgba(37,211,102,.65),0 0 22px rgba(37,211,102,.38),0 8px 30px rgba(0,0,0,.4)}50%{box-shadow:0 0 18px rgba(37,211,102,1),0 0 40px rgba(37,211,102,.72),0 8px 30px rgba(0,0,0,.4)}}
 @media(prefers-reduced-motion:reduce){.fab{animation:none}}
 
+
+/* Company websites directory and business marketplace */
+.market-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;margin:-8px 0 22px}
+.market-search{margin:0}
+.market-count{font-size:13px;color:var(--mu);white-space:nowrap}
+.market-card{display:flex;flex-direction:column;gap:13px;min-height:100%;padding:22px;border:1px solid rgba(92,214,255,.23);border-radius:17px;background:linear-gradient(145deg,rgba(13,30,51,.94),rgba(5,16,30,.94));box-shadow:0 14px 36px rgba(0,0,0,.16)}
+.market-top{display:flex;align-items:center;gap:14px}
+.market-logo{width:70px;height:70px;flex:0 0 70px;object-fit:contain;padding:8px;border-radius:15px;background:#081321;border:1px solid rgba(92,214,255,.2)}
+.market-card h3{margin:0;font-size:19px}
+.market-category{display:inline-flex;align-self:flex-start;padding:3px 10px;border-radius:99px;color:var(--cy);background:rgba(16,75,111,.35);border:1px solid rgba(92,214,255,.18);font-size:12px}
+.market-card p{margin:0;color:var(--mu);font-size:14px}
+.market-details{display:grid;gap:7px;font-size:13px;color:#d7e8f7}
+.market-details a{color:var(--cy);overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:3px}
+.market-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:auto;padding-top:5px}
+.market-actions .btn{font-size:13px;padding:9px 13px}
+.market-empty{display:none;border:1px dashed rgba(92,214,255,.3);border-radius:14px;padding:22px;color:var(--mu);text-align:center}
+.market-join{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.market-join .full{grid-column:1/-1}
+.market-join label{margin-top:0}
+.market-join textarea{width:100%;min-height:100px;resize:vertical;background:#061323;color:var(--tx);border:1px solid #1d3b58;border-radius:10px;padding:11px 12px;font:inherit;font-size:14px}
+.market-intro{max-width:850px;color:var(--mu);margin-top:-15px;margin-bottom:24px}
+.market-disclaimer{font-size:12px;color:var(--mu);margin-top:14px}
+@media(max-width:600px){.market-tools{grid-template-columns:1fr}.market-count{white-space:normal}.market-join{grid-template-columns:1fr}.market-join .full{grid-column:auto}.market-card{padding:18px}}
+
 </style>
 </head>
 <body>
 <header><div class="w"><a class="brand" href="#" aria-label="OmdaNy Tech - الصفحة الرئيسية"><img src="assets/omdany-tech-logo.svg" alt="" width="42" height="42"><span>OmdaNy <b>Tech</b></span></a>
-<nav><a href="#sectors">القطاعات</a><a href="#gallery">صور الأنظمة</a><a href="#offers">العروض</a><a href="#modes">طرق التشغيل</a><a href="#license">التراخيص</a></nav>
+<nav><a href="#sectors">القطاعات</a><a href="#gallery">صور الأنظمة</a><a href="#websites">مواقع الشركات</a><a href="#marketplace">سوق الشركات</a><a href="#offers">العروض</a></nav>
 <a class="btn o" href="#pick">اختر نظامك</a></div></header>
 
 <main class="w">
@@ -200,6 +224,61 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 <article class="gallery-card" tabindex="0" role="button" data-app="reports" aria-label="تفاصيل نظام التقارير والإدارة"><img src="assets/project-6.svg?v=20261024" alt="واجهة التقارير والمتابعة" loading="lazy"><div><h3>التقارير والمتابعة</h3><p>ملخصات وتقارير تساعدك على اتخاذ القرار</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
 <article class="gallery-card" tabindex="0" role="button" data-app="pos" aria-label="تفاصيل نظام الكاشير والجرد"><img src="assets/project-7.svg?v=20261024" alt="واجهة نظام الكاشير وإدارة المخزون" loading="lazy"><div><h3>كاشير متكامل مع الجرد</h3><p>مبيعات وباركود ومخزون وحركة الأصناف</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
 </div></section>
+
+
+<section id="websites">
+<h2>مواقع الشركات ودليل الأعمال</h2>
+<p class="market-intro">مساحة لعرض موقع كل شركة مع شعارها وبياناتها الأساسية وخدماتها وروابط التواصل الرسمية، حتى يستطيع العملاء اكتشاف الشركات والوصول إليها بسهولة.</p>
+<div class="market-tools">
+<input class="market-search" id="companySearch" type="search" placeholder="ابحث باسم الشركة أو مجالها أو خدمتها" aria-label="ابحث في دليل الشركات">
+<span class="market-count" id="companyCount" aria-live="polite">شركة واحدة في الدليل حاليًا</span>
+</div>
+<div class="g" id="companyDirectory">
+<article class="market-card" data-company-card data-search="omdany tech أومداني تك تقنية برمجيات أنظمة إدارة محاسبة كاشير مواقع إلكترونية">
+<div class="market-top">
+<img class="market-logo" src="assets/omdany-tech-logo.svg" alt="شعار OmdaNy Tech">
+<div><h3>OmdaNy Tech</h3><span class="market-category">تقنية وبرمجيات الأعمال</span></div>
+</div>
+<p>حلول تقنية للشركات تشمل أنظمة الإدارة والمحاسبة والكاشير والموارد البشرية والإنتاج، مع إمكانية تصميم مواقع إلكترونية للشركات وإبراز علامتها التجارية.</p>
+<div class="market-details">
+<div><strong>الموقع الإلكتروني:</strong> <a href="https://ae7656714-jpg.github.io/omda-ny-tech/" target="_blank" rel="noopener noreferrer">زيارة موقع OmdaNy Tech</a></div>
+<div><strong>البريد الإلكتروني:</strong> <a href="mailto:omdanytech@gmail.com">omdanytech@gmail.com</a></div>
+<div><strong>واتساب:</strong> <a href="https://wa.me/201127553859" target="_blank" rel="noopener noreferrer">التواصل مع الشركة</a></div>
+<div><strong>مجالات الخدمة:</strong> أنظمة الأعمال، مواقع الشركات، الحلول الرقمية</div>
+</div>
+<div class="market-actions"><a class="btn o" href="https://ae7656714-jpg.github.io/omda-ny-tech/" target="_blank" rel="noopener noreferrer">فتح الموقع</a><a class="btn" href="https://wa.me/201127553859?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20OmdaNy%20Tech%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85" target="_blank" rel="noopener noreferrer">تواصل مع الشركة</a></div>
+</article>
+</div>
+<div class="market-empty" id="companyEmpty">لا توجد نتائج مطابقة. جرّب كلمة بحث أخرى أو اطلب إضافة شركتك إلى الدليل.</div>
+<p class="market-disclaimer">يظهر حاليًا ملف OmdaNy Tech فقط. ستُضاف الشركات الأخرى بعد استلام بياناتها والتحقق من روابطها وشعارها؛ لن نعرض بيانات شركات وهمية.</p>
+</section>
+
+<section id="marketplace">
+<h2>Marketplace — سوق الشركات</h2>
+<p class="market-intro">دليل تجاري يجمع الشركات ومواقعها وخدماتها في مكان واحد. يمكن لكل شركة تقديم بياناتها لعرض شعارها، نبذة عنها، مجالها، موقعها، وسائل التواصل وروابط صفحاتها الرسمية.</p>
+<div class="offer-grid">
+<div class="offer-card"><h3>🌐 صفحة تعريف لكل شركة</h3><p>شعار الشركة، الاسم التجاري، نبذة، الخدمات، الموقع الإلكتروني، البريد، الهاتف والعنوان عند توفيره.</p></div>
+<div class="offer-card"><h3>🔎 اكتشاف وبحث</h3><p>يستطيع الزائر البحث في الشركات حسب الاسم أو المجال أو الخدمة، ثم فتح موقع الشركة والتواصل معها.</p></div>
+<div class="offer-card"><h3>🤝 انضم إلى السوق</h3><p>أرسل بيانات شركتك وروابطها، وسيتم مراجعتها وتجهيز بطاقة تعريف لها قبل نشرها في الدليل.</p></div>
+</div>
+<div class="offer" style="margin-top:24px">
+<h3 style="margin-top:0">اطلب إضافة شركتك إلى Marketplace</h3>
+<p style="color:var(--mu);margin-top:0">املأ البيانات المتاحة. سيفتح واتساب برسالة جاهزة لمراجعتها وإرسالها؛ لن تُنشر الشركة تلقائيًا من خلال هذا النموذج.</p>
+<form id="marketJoinForm" class="market-join">
+<div><label for="companyName">اسم الشركة *</label><input id="companyName" name="companyName" required maxlength="100" placeholder="اسم الشركة التجاري"></div>
+<div><label for="companyCategory">مجال الشركة *</label><input id="companyCategory" name="companyCategory" required maxlength="100" placeholder="مثال: تجارة، خدمات، تقنية"></div>
+<div class="full"><label for="companyDescription">نبذة عن الشركة والخدمات *</label><textarea id="companyDescription" name="companyDescription" required maxlength="700" placeholder="اكتب وصفًا واضحًا للشركة وخدماتها"></textarea></div>
+<div><label for="companyWebsite">الموقع الإلكتروني</label><input id="companyWebsite" name="companyWebsite" type="url" placeholder="https://example.com"></div>
+<div><label for="companyLogo">رابط الشعار (Logo URL)</label><input id="companyLogo" name="companyLogo" type="url" placeholder="رابط مباشر لصورة الشعار"></div>
+<div><label for="companyEmail">البريد الإلكتروني</label><input id="companyEmail" name="companyEmail" type="email" placeholder="name@company.com"></div>
+<div><label for="companyPhone">رقم الهاتف أو واتساب *</label><input id="companyPhone" name="companyPhone" required maxlength="40" placeholder="+20..."></div>
+<div><label for="companyAddress">العنوان أو نطاق الخدمة</label><input id="companyAddress" name="companyAddress" maxlength="160" placeholder="المدينة أو المحافظات التي تخدمها"></div>
+<div class="full"><label for="companySocial">روابط التواصل الاجتماعي (اختياري)</label><input id="companySocial" name="companySocial" maxlength="350" placeholder="Facebook / LinkedIn / Instagram"></div>
+<div class="full"><button class="btn" type="submit">إرسال بيانات الشركة عبر واتساب</button></div>
+</form>
+<p class="market-disclaimer">تنبيه: الموقع الحالي منشور على GitHub Pages، لذلك لا يحفظ طلبات الشركات أو يضيفها تلقائيًا إلى قاعدة بيانات. هذا النموذج يجهز رسالة واتساب فقط. لتفعيل حسابات الشركات، لوحة تحكم، مراجعة الطلبات، وإضافة القوائم مباشرةً إلى السوق نحتاج إلى ربط Marketplace بقاعدة بيانات وخلفية آمنة.</p>
+</div>
+</section>
 
 <section id="modes"><h2>طرق التشغيل</h2>
 <div class="g">
@@ -295,6 +374,49 @@ document.getElementById("modalClose").addEventListener("click",closeAppModal);
 document.getElementById("modalDone").addEventListener("click",closeAppModal);
 modalEl.addEventListener("click",function(ev){if(ev.target===modalEl)closeAppModal();});
 document.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&modalEl.classList.contains("open"))closeAppModal();});
+
+
+/* Marketplace: directory search and WhatsApp listing request */
+(function(){
+ var search=document.getElementById("companySearch");
+ var cards=Array.prototype.slice.call(document.querySelectorAll("[data-company-card]"));
+ var count=document.getElementById("companyCount");
+ var empty=document.getElementById("companyEmpty");
+ if(search){
+  search.addEventListener("input",function(){
+   var q=search.value.trim().toLocaleLowerCase();
+   var visible=0;
+   cards.forEach(function(card){
+    var hay=(card.getAttribute("data-search")+" "+card.textContent).toLocaleLowerCase();
+    var show=!q||hay.indexOf(q)!==-1;
+    card.style.display=show?"flex":"none";
+    if(show)visible++;
+   });
+   if(count)count.textContent="عدد الشركات الظاهرة: "+visible;
+   if(empty)empty.style.display=visible?"none":"block";
+  });
+ }
+ var form=document.getElementById("marketJoinForm");
+ if(form){
+  form.addEventListener("submit",function(ev){
+   ev.preventDefault();
+   var val=function(id){return document.getElementById(id).value.trim()||"غير مذكور";};
+   var msg=[
+    "مرحبًا OmdaNy Tech، أريد طلب إضافة شركتي إلى Marketplace.",
+    "اسم الشركة: "+val("companyName"),
+    "المجال: "+val("companyCategory"),
+    "نبذة وخدمات: "+val("companyDescription"),
+    "الموقع الإلكتروني: "+val("companyWebsite"),
+    "رابط الشعار: "+val("companyLogo"),
+    "البريد الإلكتروني: "+val("companyEmail"),
+    "الهاتف/واتساب: "+val("companyPhone"),
+    "العنوان/نطاق الخدمة: "+val("companyAddress"),
+    "روابط التواصل الاجتماعي: "+val("companySocial")
+   ].join("\n");
+   window.open("https://wa.me/201127553859?text="+encodeURIComponent(msg),"_blank","noopener");
+  });
+ }
+})();
 
 </script>
 </body>
