@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">OmdaNy Tech</title><desc id="desc">Geometric O mark with digital growth bars in cyan and navy.</desc>
+<defs><linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9AF0FF"/><stop offset="1" stop-color="#329BD1"/></linearGradient></defs>
+<rect x="4" y="4" width="120" height="120" rx="30" fill="#071426" stroke="#1E4965" stroke-width="2"/>
+<path d="M64 20a44 44 0 1 0 44 44A44 44 0 0 0 64 20Zm0 13a31 31 0 1 1-31 31 31 31 0 0 1 31-31Z" fill="url(#ring)"/>
+<path d="M42 82V66h11v16Zm17 0V53h11v29Zm17 0V40h11v42Z" fill="#F4F8FF" rx="2"/>
+<path d="m39 54 19-12 14 6 19-18" fill="none" stroke="#72E0FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M83 30h8v8" fill="none" stroke="#72E0FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
