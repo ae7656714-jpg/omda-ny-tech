@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Omda--Ny tech | أنظمة الكاشير والتشغيل والإدارة</title>
+<title>OmdaNy Tech | أنظمة الكاشير والتشغيل والإدارة</title>
+<link rel="icon" type="image/svg+xml" href="assets/omdany-tech-logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -94,10 +95,33 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 .gallery-card p{font-size:13px;color:var(--mu);margin:0}
 @media(max-width:440px){.offer{padding:20px}.gallery-card img{height:170px}}
 
+
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:22px;letter-spacing:-.5px;direction:ltr;white-space:nowrap}
+.brand img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 0 10px rgba(114,224,255,.18))}
+.brand b{color:var(--cy);text-shadow:0 0 22px rgba(114,224,255,.3)}
+.gallery-card{cursor:pointer;transition:transform .22s,border-color .22s,box-shadow .22s}
+.gallery-card:hover,.gallery-card:focus-visible{transform:translateY(-4px);border-color:rgba(92,214,255,.55);box-shadow:0 12px 32px rgba(0,0,0,.2);outline:none}
+.gallery-card:focus-visible{outline:2px solid var(--cy);outline-offset:3px}
+.gallery-card .open-hint{display:inline-block;color:var(--cy);font-size:12px;margin-top:8px}
+.modal-backdrop{position:fixed;inset:0;z-index:100;background:rgba(0,5,14,.78);backdrop-filter:blur(7px);display:none;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop.open{display:flex}
+.app-modal{width:min(620px,100%);max-height:min(88vh,800px);overflow:auto;background:linear-gradient(145deg,#0d2035,#06111f);border:1px solid rgba(114,224,255,.32);border-radius:20px;padding:25px;box-shadow:0 25px 90px rgba(0,0,0,.55);position:relative}
+.app-modal h2{margin:0 42px 10px 0;font-size:25px}
+.app-modal h2:after{content:"";display:block;width:48px;height:3px;border-radius:9px;background:var(--cy);margin-top:9px}
+.app-modal p{color:var(--mu);margin:10px 0}
+.app-modal ul{color:#dceafa;padding-inline-start:22px}
+.app-modal li{margin:6px 0}
+.modal-close{position:absolute;top:14px;inset-inline-end:14px;width:38px;height:38px;border-radius:10px;border:1px solid rgba(114,224,255,.25);background:#0a1a2b;color:var(--cy);font-size:23px;cursor:pointer}
+.modal-close:hover{background:#123451}
+.modal-tag{display:inline-block;background:rgba(16,75,111,.35);border:1px solid rgba(92,214,255,.2);color:var(--cy);padding:3px 11px;border-radius:999px;font-size:12px;margin-bottom:10px}
+.modal-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+@media(max-width:800px){.brand{font-size:19px;gap:7px}.brand img{width:36px;height:36px}}
+@media(max-width:440px){.brand{font-size:17px}.brand img{width:33px;height:33px}.app-modal{padding:20px}.app-modal h2{font-size:21px}}
+
 </style>
 </head>
 <body>
-<header><div class="w"><a class="logo" href="#">Omda<span>--</span>Ny tech</a>
+<header><div class="w"><a class="brand" href="#" aria-label="OmdaNy Tech - الصفحة الرئيسية"><img src="assets/omdany-tech-logo.svg" alt="" width="42" height="42"><span>OmdaNy <b>Tech</b></span></a>
 <nav><a href="#sectors">القطاعات</a><a href="#gallery">صور الأنظمة</a><a href="#offers">العروض</a><a href="#modes">طرق التشغيل</a><a href="#license">التراخيص</a></nav>
 <a class="btn o" href="#pick">اختر نظامك</a></div></header>
 
@@ -157,16 +181,16 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 <p class="note">تُحدد أهلية الهدية والوظائف المشمولة كتابيًا قبل تأكيد الطلب. أي تطوير خاص أو استضافة أو خدمات إضافية قد تكون بتكلفة منفصلة.</p>
 <a class="btn wa" href="https://wa.me/201127553859?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D8%B3%D9%86%D9%88%D9%8A%20%D8%A7%D9%84%D8%B0%D9%8A%20%D9%8A%D8%A8%D8%AF%D8%A3%20%D9%85%D9%86%201000%20%D8%AC%D9%86%D9%8A%D9%87%20%D9%88%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D8%A7%D9%84%D9%87%D8%AF%D9%8A%D8%A9." target="_blank" rel="noopener">اطلب العرض واختر هديتك عبر واتساب</a>
 </div></section>
-<section id="gallery"><h2>صور من أنظمتنا</h2>
-<p class="note" style="margin-top:-14px;margin-bottom:20px">لقطات توضيحية من واجهات أنظمة الإدارة والحسابات والمخازن والتشغيل.</p>
+<section id="gallery"><h2>اكتشف أنظمتنا بالصور</h2>
+<p class="note" style="margin-top:-14px;margin-bottom:20px">اضغط على أي صورة لمعرفة فكرة النظام ووظائفه، وما إذا كان مناسبًا لنشاطك.</p>
 <div class="gallery-grid">
-<article class="gallery-card"><img src="assets/project-1.png" alt="لوحة تحكم نظام B&M لخدمات السيارات" loading="lazy"><div><h3>إدارة الخدمات والمصروفات</h3><p>لوحة متابعة ومؤشرات تشغيلية</p></div></article>
-<article class="gallery-card"><img src="assets/project-2.png" alt="واجهة نظام El Magd Accounting" loading="lazy"><div><h3>El Magd Accounting</h3><p>واجهة النظام الرئيسية</p></div></article>
-<article class="gallery-card"><img src="assets/project-3.png" alt="لوحة رئيسية لنظام الحسابات" loading="lazy"><div><h3>لوحة الحسابات الرئيسية</h3><p>عرض وحدات النظام من مكان واحد</p></div></article>
-<article class="gallery-card"><img src="assets/project-4.png" alt="واجهة إدارة بيانات النظام" loading="lazy"><div><h3>إدارة البيانات</h3><p>شاشات إدخال ومتابعة البيانات</p></div></article>
-<article class="gallery-card"><img src="assets/project-5.png" alt="لوحة تحكم تشغيلية" loading="lazy"><div><h3>لوحة تشغيلية</h3><p>مؤشرات وملخصات واضحة</p></div></article>
-<article class="gallery-card"><img src="assets/project-6.png" alt="واجهة تقارير النظام" loading="lazy"><div><h3>التقارير والمتابعة</h3><p>واجهة لمراجعة المعلومات</p></div></article>
-<article class="gallery-card"><img src="assets/project-7.png" alt="واجهة متجر الأصدقاء للتجارة والتوريدات" loading="lazy"><div><h3>المتاجر والتوريدات</h3><p>عرض تجاري للمنتجات والطلبات</p></div></article>
+<article class="gallery-card" tabindex="0" role="button" data-app="service" aria-label="تفاصيل نظام إدارة الخدمات والمصروفات"><img src="assets/project-1.png" alt="واجهة نظام إدارة الخدمات والمصروفات" loading="lazy"><div><h3>إدارة الأنشطة والخدمات</h3><p>متابعة التشغيل والمصروفات والإيرادات</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
+<article class="gallery-card" tabindex="0" role="button" data-app="accounting" aria-label="تفاصيل نظام المحاسبة"><img src="assets/project-2.png" alt="واجهة نظام المحاسبة El Magd Accounting" loading="lazy"><div><h3>نظام محاسبة متكامل</h3><p>مبيعات ومشتريات وعملاء وموردون وتقارير</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
+<article class="gallery-card" tabindex="0" role="button" data-app="dashboard" aria-label="تفاصيل نظام الإدارة الداخلية"><img src="assets/project-3.png" alt="لوحة رئيسية للإدارة الداخلية" loading="lazy"><div><h3>الإدارة الداخلية</h3><p>متابعة الفروع والمهام ومؤشرات الأداء</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
+<article class="gallery-card" tabindex="0" role="button" data-app="hr" aria-label="تفاصيل نظام الموارد البشرية"><img src="assets/project-4.png" alt="واجهة نظام الموارد البشرية" loading="lazy"><div><h3>الموارد البشرية HR</h3><p>ملفات الموظفين والحضور والإجازات</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
+<article class="gallery-card" tabindex="0" role="button" data-app="production" aria-label="تفاصيل نظام أوامر الإنتاج"><img src="assets/project-5.png" alt="واجهة نظام أوامر الإنتاج" loading="lazy"><div><h3>إدارة الإنتاج</h3><p>أوامر التصنيع ومراحل التنفيذ والخامات</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
+<article class="gallery-card" tabindex="0" role="button" data-app="reports" aria-label="تفاصيل نظام التقارير والإدارة"><img src="assets/project-6.png" alt="واجهة التقارير والمتابعة" loading="lazy"><div><h3>التقارير والمتابعة</h3><p>ملخصات وتقارير تساعدك على اتخاذ القرار</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
+<article class="gallery-card" tabindex="0" role="button" data-app="pos" aria-label="تفاصيل نظام الكاشير والجرد"><img src="assets/project-7.png" alt="واجهة نظام الكاشير وإدارة المخزون" loading="lazy"><div><h3>كاشير متكامل مع الجرد</h3><p>مبيعات وباركود ومخزون وحركة الأصناف</p><span class="open-hint">اضغط لمعرفة التفاصيل ←</span></div></article>
 </div></section>
 
 <section id="modes"><h2>طرق التشغيل</h2>
@@ -194,8 +218,19 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 <details><summary>كيف أطلب نظامًا مخصصًا؟</summary><p>تواصل مع مستشار المبيعات، وسنتفق معك على نطاق العمل وموعد التسليم.</p></details>
 </section>
 </main>
-<footer>Omda--Ny tech — تميّزنا سرّ تفوّقنا<br><span style="display:inline-block;margin-top:8px">للتواصل معنا: <a href="mailto:omdanytech@gmail.com" style="color:var(--cy);text-decoration:underline;text-underline-offset:4px">omdanytech@gmail.com</a><br><a href="https://wa.me/201127553859" target="_blank" rel="noopener noreferrer" style="color:var(--cy);text-decoration:underline;text-underline-offset:4px">تواصل معنا عبر واتساب</a></span></footer>
-<a class="fab" href="https://wa.me/201127553859?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A3%D9%86%D8%B8%D9%85%D8%A9%20Omda--Ny%20tech" target="_blank" rel="noopener">تواصل واتساب</a>
+
+<div class="modal-backdrop" id="appModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+<div class="app-modal">
+<button type="button" class="modal-close" id="modalClose" aria-label="إغلاق">×</button>
+<span class="modal-tag" id="modalTag">نظام أعمال</span>
+<h2 id="modalTitle">تفاصيل النظام</h2>
+<p id="modalIntro"></p>
+<ul id="modalFeatures"></ul>
+<p id="modalFit"></p>
+<div class="modal-actions"><a class="btn" id="modalContact" href="https://wa.me/201127553859" target="_blank" rel="noopener">اطلب تفاصيل النظام عبر واتساب</a><button type="button" class="btn o" id="modalDone">إغلاق</button></div>
+</div></div>
+<footer>OmdaNy Tech — تميّزنا سرّ تفوّقنا<br><span style="display:inline-block;margin-top:8px">للتواصل معنا: <a href="mailto:omdanytech@gmail.com" style="color:var(--cy);text-decoration:underline;text-underline-offset:4px">omdanytech@gmail.com</a><br><a href="https://wa.me/201127553859" target="_blank" rel="noopener noreferrer" style="color:var(--cy);text-decoration:underline;text-underline-offset:4px">تواصل معنا عبر واتساب</a></span></footer>
+<a class="fab" href="https://wa.me/201127553859?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A3%D9%86%D8%B8%D9%85%D8%A9%20OmdaNy%20tech" target="_blank" rel="noopener">تواصل واتساب</a>
 
 <script>
 var N={rest:"المطاعم والكافيهات",shop:"المحلات والسوبر ماركت",salon:"المشاغل والتجميل",dist:"شركات التوزيع",fact:"المصانع",corp:"الشركات الكبيرة",wh:"المخازن والشحن",clinic:"العيادات والخدمات",edu:"التدريب والتعليم",svc:"الصيانة والخدمات"};
@@ -215,11 +250,44 @@ function upd(){
  "<p>السعر: يُحدَّد حسب الباقة بعد ربط الكتالوج.</p>";
  var s=function(i){var x=document.getElementById(i);return x.options[x.selectedIndex].text};
  var nm=document.getElementById("nm").value.trim();
- var m="مرحبًا Omda--Ny tech، أريد الاستفسار عن نظام.\n"+(nm?"الاسم: "+nm+"\n":"")+"النشاط: "+s("a")+"\nالاحتياج: "+s("b")+"\nالفروع: "+s("c")+"\nالاستخدام: "+s("d")+"\nقاعدة بيانات سحابية: "+s("e")+"\nالنظام المقترح: "+K[b]+" لـ"+N[a]+" ("+mode+")";
+ var m="مرحبًا OmdaNy Tech، أريد الاستفسار عن نظام.\n"+(nm?"الاسم: "+nm+"\n":"")+"النشاط: "+s("a")+"\nالاحتياج: "+s("b")+"\nالفروع: "+s("c")+"\nالاستخدام: "+s("d")+"\nقاعدة بيانات سحابية: "+s("e")+"\nالنظام المقترح: "+K[b]+" لـ"+N[a]+" ("+mode+")";
  document.getElementById("wa").href="https://wa.me/201127553859?text="+encodeURIComponent(m);
 }
 ["a","b","c","d","e"].forEach(function(i){document.getElementById(i).addEventListener("change",upd)});
 upd();
+
+var appInfo={
+ service:{tag:"إدارة وتشغيل",title:"نظام إدارة الأنشطة والخدمات",intro:"يساعدك على تنظيم العمل اليومي ومتابعة الإيرادات والمصروفات والخدمات من واجهة واحدة.",features:["تسجيل الإيرادات والمصروفات ومراجعتها","متابعة الخدمات والأقسام وحالة العمل","تقارير دورية تساعد على فهم أداء النشاط","إمكانية تخصيص الصلاحيات بحسب احتياج المنشأة"],fit:"مناسب لمراكز الخدمات والأنشطة التي تحتاج إلى متابعة تشغيلية. يتم تأكيد الوحدات المتاحة بعد تحديد متطلباتك."},
+ accounting:{tag:"محاسبة",title:"نظام محاسبة متكامل",intro:"يجمع العمليات المالية الأساسية في مكان واحد لمساعدتك على متابعة حركة النشاط بوضوح.",features:["إدارة العملاء والموردين والأرصدة","تسجيل المبيعات والمشتريات والتحصيلات","متابعة المصروفات والتقارير المالية","صلاحيات للمستخدمين بحسب إعداد النظام"],fit:"مناسب للشركات التجارية والتوزيع والأنشطة التي تحتاج إلى متابعة الحسابات. قد تختلف الوظائف حسب الباقة."},
+ dashboard:{tag:"إدارة داخلية",title:"نظام الإدارة الداخلية",intro:"لوحة متابعة تساعد الإدارة على تنظيم المهام والعمليات ومراقبة الأداء عبر الأقسام أو الفروع.",features:["ملخصات لمؤشرات التشغيل","تنظيم المهام والمتابعة بين الأقسام","متابعة الفروع والمستخدمين والصلاحيات","تقارير إدارية وفق الوحدات المختارة"],fit:"مناسب للشركات التي تريد رؤية أوضح لسير العمل الداخلي، مع إمكانية تحديد الوحدات المطلوبة مسبقًا."},
+ hr:{tag:"موارد بشرية HR",title:"نظام الموارد البشرية",intro:"ينظم بيانات الموظفين وإجراءات الموارد البشرية في مكان مركزي.",features:["ملفات وبيانات الموظفين","متابعة الحضور والإجازات إذا كانت ضمن الباقة","تنظيم الأقسام والمسميات الوظيفية","تقارير شؤون العاملين والصلاحيات"],fit:"مناسب للشركات التي تريد إدارة داخلية للموظفين. تُحدد الوظائف المتاحة في العرض النهائي."},
+ production:{tag:"إنتاج وتصنيع",title:"نظام أوامر الإنتاج",intro:"يساعد على تنظيم أوامر التصنيع ومتابعة مراحل التنفيذ والاحتياجات المرتبطة بالإنتاج.",features:["إنشاء ومتابعة أوامر الإنتاج","متابعة مراحل التنفيذ وحالة كل أمر","ربط الخامات والمخزون عند توفر الوحدة","تقارير متابعة الإنتاج والطلبات"],fit:"مناسب للورش والمصانع والأنشطة التصنيعية. احتساب الخامات والتكلفة يعتمد على الوحدات التي يتم الاتفاق عليها."},
+ reports:{tag:"تقارير وإدارة",title:"نظام التقارير والمتابعة",intro:"يوفر نظرة مجمعة على البيانات المسجلة لدعم المتابعة واتخاذ القرار.",features:["ملخصات دورية حسب بيانات النظام","متابعة حركة المبيعات والمخزون عند توفرها","تقارير حسب الصلاحيات والوحدات","إمكانية اختيار التقارير المهمة لنشاطك"],fit:"مناسب للإدارة التي تحتاج إلى تقارير واضحة. التقارير تعتمد على البيانات والوحدات المفعلة في النظام."},
+ pos:{tag:"كاشير ومخزون",title:"نظام كاشير متكامل مع الجرد",intro:"حل لنقاط البيع يربط عمليات البيع بحركة الأصناف والمخزون لمتابعة ما يُباع وما يتبقى.",features:["تسجيل المبيعات وطباعة الفواتير حسب التجهيز","دعم الباركود إذا كان متاحًا في النسخة والأجهزة","متابعة أرصدة الأصناف وحركات المخزون","تسجيل الجرد والفروقات وفق وظائف النظام","تقارير المبيعات والأصناف الأكثر حركة"],fit:"مناسب للمحلات والسوبر ماركت والأنشطة التي تحتاج إلى كاشير ومخزون. تأكد من دعم الطابعة والباركود والأجهزة المطلوبة قبل الشراء."}
+};
+var modalEl=document.getElementById("appModal");
+function openAppModal(key){
+ var x=appInfo[key]; if(!x)return;
+ document.getElementById("modalTag").textContent=x.tag;
+ document.getElementById("modalTitle").textContent=x.title;
+ document.getElementById("modalIntro").textContent=x.intro;
+ var list=document.getElementById("modalFeatures"); list.textContent="";
+ x.features.forEach(function(item){var li=document.createElement("li");li.textContent=item;list.appendChild(li);});
+ document.getElementById("modalFit").textContent=x.fit;
+ var message="مرحبًا OmdaNy Tech، أريد الاستفسار عن: "+x.title+"؛ أرجو توضيح السعر والوظائف المتاحة.";
+ document.getElementById("modalContact").href="https://wa.me/201127553859?text="+encodeURIComponent(message);
+ modalEl.classList.add("open");document.body.style.overflow="hidden";document.getElementById("modalClose").focus();
+}
+function closeAppModal(){modalEl.classList.remove("open");document.body.style.overflow="";}
+document.querySelectorAll(".gallery-card[data-app]").forEach(function(card){
+ card.addEventListener("click",function(){openAppModal(card.getAttribute("data-app"));});
+ card.addEventListener("keydown",function(ev){if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();openAppModal(card.getAttribute("data-app"));}});
+});
+document.getElementById("modalClose").addEventListener("click",closeAppModal);
+document.getElementById("modalDone").addEventListener("click",closeAppModal);
+modalEl.addEventListener("click",function(ev){if(ev.target===modalEl)closeAppModal();});
+document.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&modalEl.classList.contains("open"))closeAppModal();});
+
 </script>
 </body>
 </html>
