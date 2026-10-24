@@ -77,11 +77,28 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 @media(max-width:800px){.w{padding:0 18px}header .w{min-height:68px;gap:12px}nav{display:none}.logo{font-size:19px}header .btn{padding:9px 13px;font-size:13px}.hero{grid-template-columns:1fr;gap:30px;padding:54px 0 48px;min-height:auto}.hero h1{font-size:clamp(34px,9vw,48px)}.hero p{font-size:16px}.pick{padding:22px;border-radius:17px}section{padding:52px 0}.g{grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}.c{padding:19px}}
 @media(max-width:440px){.w{padding:0 15px}.hero{padding-top:42px}.cta .btn{width:100%}.g{grid-template-columns:1fr}.pick{padding:18px}.fab{inset-inline-start:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:10px 16px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+.offer{position:relative;overflow:hidden;border:1px solid rgba(114,224,255,.34);background:linear-gradient(130deg,rgba(15,54,82,.92),rgba(8,20,37,.96));border-radius:20px;padding:28px;margin:18px 0 0;box-shadow:0 18px 55px rgba(0,0,0,.2)}
+.offer .price{font-size:clamp(34px,5vw,52px);line-height:1.2;font-weight:700;color:var(--cy);margin:10px 0}
+.offer .price small{font-size:15px;color:var(--mu);font-weight:400}
+.offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px}
+.offer-card{border:1px solid rgba(92,214,255,.22);background:rgba(4,15,28,.62);border-radius:14px;padding:20px}
+.offer-card h3{margin:0 0 8px;color:var(--cy);font-size:18px}
+.offer-card p{margin:0;color:var(--mu);font-size:14px}
+.gift{display:inline-flex;align-items:center;gap:8px;color:#b9f7d2;background:rgba(22,101,62,.2);border:1px solid rgba(91,225,155,.28);padding:7px 13px;border-radius:999px;font-size:13px;margin:8px 0}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.gallery-card{overflow:hidden;border:1px solid rgba(92,214,255,.2);border-radius:15px;background:rgba(7,17,31,.82)}
+.gallery-card img{display:block;width:100%;height:190px;object-fit:cover;background:#081321}
+.gallery-card div{padding:13px 15px}
+.gallery-card h3{font-size:16px;margin:0 0 3px}
+.gallery-card p{font-size:13px;color:var(--mu);margin:0}
+@media(max-width:440px){.offer{padding:20px}.gallery-card img{height:170px}}
+
 </style>
 </head>
 <body>
 <header><div class="w"><a class="logo" href="#">Omda<span>--</span>Ny tech</a>
-<nav><a href="#sectors">القطاعات</a><a href="#modes">طرق التشغيل</a><a href="#license">التراخيص</a><a href="#faq">الأسئلة الشائعة</a></nav>
+<nav><a href="#sectors">القطاعات</a><a href="#gallery">صور الأنظمة</a><a href="#offers">العروض</a><a href="#modes">طرق التشغيل</a><a href="#license">التراخيص</a></nav>
 <a class="btn o" href="#pick">اختر نظامك</a></div></header>
 
 <main class="w">
@@ -90,7 +107,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 <span class="slogan">تميّزنا سرّ تفوّقنا</span>
 <h1>كل أنظمة تشغيل وإدارة أعمالك… في مكان واحد</h1>
 <p>حلول ذكية للكاشير والتشغيل والإدارة، مصممة لتناسب نشاطك، وتعمل على الكمبيوتر والموبايل، مع إمكانية الوصول إلى بياناتك من أي مكان.</p>
-<div class="cta"><a class="btn" href="#sectors">اكتشف الأنظمة</a><a class="btn o" href="#pick">اختر نظام نشاطك</a><a class="btn o" href="#faq">اطلب نظامًا مخصصًا</a></div>
+<div class="cta"><a class="btn" href="#offers">شاهد عروض البداية</a><a class="btn o" href="#gallery">شاهد صور الأنظمة</a><a class="btn o" href="#pick">اختر نظام نشاطك</a></div>
 </div>
 <div class="pick" id="pick">
 <h2>اعرف النظام المناسب لك</h2>
@@ -125,6 +142,33 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 <div class="c"><h3>الصيانة والخدمات</h3><p>طلبات، مهام، متابعة تنفيذ وفواتير.</p></div>
 </div></section>
 
+
+<section id="offers"><h2>عروض تأسيس نظامك</h2>
+<div class="offer">
+<span class="slogan">عرض البداية السنوي</span>
+<div class="price">يبدأ من 1,000 جنيه <small>/ سنويًا</small></div>
+<p style="color:var(--mu);margin:0">احصل على نظام يناسب نشاطك بترخيص سنوي اقتصادي. السعر النهائي يزيد حسب الخدمات والوحدات المطلوبة، وعدد الفروع والأجهزة، وطريقة التشغيل والاستضافة.</p>
+<div class="gift">🎁 هدية مجانية واحدة من اختيارك مع الباقة المؤهلة</div>
+<div class="offer-grid">
+<div class="offer-card"><h3>🎁 الهدية الأولى: الموارد البشرية</h3><p>نظام موارد بشرية داخلي لمتابعة بيانات الموظفين وتنظيم شؤونهم، وفق نطاق الوظائف المتفق عليه.</p></div>
+<div class="offer-card"><h3>🎁 الهدية الثانية: أوامر الإنتاج</h3><p>نظام داخلي لأوامر الإنتاج لمتابعة طلبات التصنيع ومراحل التنفيذ، وفق نطاق الوظائف المتفق عليه.</p></div>
+<div class="offer-card"><h3>سعّر حسب احتياجك</h3><p>ابدأ بالأساسيات، ثم أضف المخازن أو الفروع أو التقارير أو الربط أو تطبيقات الموبايل حسب احتياجك.</p></div>
+</div>
+<p class="note">تُحدد أهلية الهدية والوظائف المشمولة كتابيًا قبل تأكيد الطلب. أي تطوير خاص أو استضافة أو خدمات إضافية قد تكون بتكلفة منفصلة.</p>
+<a class="btn wa" href="https://wa.me/201127553859?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D9%86%D8%B8%D8%A7%D9%85%20%D8%A7%D9%84%D8%B3%D9%86%D9%88%D9%8A%20%D8%A7%D9%84%D8%B0%D9%8A%20%D9%8A%D8%A8%D8%AF%D8%A3%20%D9%85%D9%86%201000%20%D8%AC%D9%86%D9%8A%D9%87%20%D9%88%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D8%A7%D9%84%D9%87%D8%AF%D9%8A%D8%A9." target="_blank" rel="noopener">اطلب العرض واختر هديتك عبر واتساب</a>
+</div></section>
+<section id="gallery"><h2>صور من أنظمتنا</h2>
+<p class="note" style="margin-top:-14px;margin-bottom:20px">لقطات توضيحية من واجهات أنظمة الإدارة والحسابات والمخازن والتشغيل.</p>
+<div class="gallery-grid">
+<article class="gallery-card"><img src="assets/project-1.jpg" alt="لوحة تحكم نظام B&M لخدمات السيارات" loading="lazy"><div><h3>إدارة الخدمات والمصروفات</h3><p>لوحة متابعة ومؤشرات تشغيلية</p></div></article>
+<article class="gallery-card"><img src="assets/project-2.jpg" alt="واجهة نظام El Magd Accounting" loading="lazy"><div><h3>El Magd Accounting</h3><p>واجهة النظام الرئيسية</p></div></article>
+<article class="gallery-card"><img src="assets/project-3.jpg" alt="لوحة رئيسية لنظام الحسابات" loading="lazy"><div><h3>لوحة الحسابات الرئيسية</h3><p>عرض وحدات النظام من مكان واحد</p></div></article>
+<article class="gallery-card"><img src="assets/project-4.jpg" alt="واجهة إدارة بيانات النظام" loading="lazy"><div><h3>إدارة البيانات</h3><p>شاشات إدخال ومتابعة البيانات</p></div></article>
+<article class="gallery-card"><img src="assets/project-5.jpg" alt="لوحة تحكم تشغيلية" loading="lazy"><div><h3>لوحة تشغيلية</h3><p>مؤشرات وملخصات واضحة</p></div></article>
+<article class="gallery-card"><img src="assets/project-6.jpg" alt="واجهة تقارير النظام" loading="lazy"><div><h3>التقارير والمتابعة</h3><p>واجهة لمراجعة المعلومات</p></div></article>
+<article class="gallery-card"><img src="assets/project-7.jpg" alt="واجهة متجر الأصدقاء للتجارة والتوريدات" loading="lazy"><div><h3>المتاجر والتوريدات</h3><p>عرض تجاري للمنتجات والطلبات</p></div></article>
+</div></section>
+
 <section id="modes"><h2>طرق التشغيل</h2>
 <div class="g">
 <div class="c"><h3>نسخة الكمبيوتر</h3><p>برنامج Windows مع دعم الطابعات والباركود، ويعمل دون إنترنت إذا كان النظام يدعم ذلك.</p></div>
@@ -138,11 +182,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mu);font-size
 <div class="wrap"><table>
 <tr><th>الخيار</th><th>المناسب لـ</th><th>ما يشمله</th></tr>
 <tr><td>اشتراك شهري</td><td>بداية بتكلفة منخفضة</td><td>التحديثات والدعم طوال الاشتراك</td></tr>
-<tr><td>اشتراك سنوي</td><td>نشاط مستقر</td><td>التحديثات والدعم لمدة سنة</td></tr>
+<tr><td>اشتراك سنوي يبدأ من 1,000 جنيه</td><td>بداية اقتصادية للنشاط</td><td>ترخيص لمدة سنة؛ السعر النهائي حسب الوحدات والخدمات والفروع وطريقة التشغيل</td></tr>
 <tr><td>مدى الحياة</td><td>الأنظمة التي تدعمه</td><td>يُوضَّح لكل نظام: الإصدار الحالي أو التحديثات، الموبايل، عدد الأجهزة والفروع</td></tr>
 <tr><td>مخصص</td><td>الشركات والمؤسسات</td><td>تطوير وتكاملات بموعد تسليم متفق عليه</td></tr>
 </table></div>
-<p class="note">الأنظمة الجاهزة تُسلَّم خلال ساعات من تأكيد الطلب. رسوم الاستضافة السحابية والدعم منفصلة عن ترخيص البرنامج.</p></section>
+<p class="note">السعر الابتدائي 1,000 جنيه سنويًا للباقة الأساسية المؤهلة. السعر النهائي ونطاق الدعم والاستضافة والهدية المجانية يُؤكد قبل الطلب؛ قد تُحسب الخدمات الإضافية بشكل منفصل.</p></section>
 
 <section id="faq"><h2>أسئلة شائعة</h2>
 <details><summary>هل أستطيع شراء نظام واحد فقط؟</summary><p>نعم. يمكنك شراء نظام مستقل أو مجموعة وحدات حسب احتياجك.</p></details>
