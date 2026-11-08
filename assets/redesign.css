@@ -1,0 +1,108 @@
+/* OmdaNy Tech — premium responsive redesign */
+:root{--bg:#071426;--bg2:#0b1d32;--panel:#10243a;--line:rgba(151,190,220,.16);--cy:#48d8e8;--cy2:#19a8c4;--tx:#f4f8fc;--mu:#afc1d3;--glow:rgba(37,188,211,.15);color-scheme:dark}
+html{scroll-padding-top:104px}
+body{background:radial-gradient(ellipse at 84% 5%,rgba(27,157,190,.17),transparent 32%),radial-gradient(ellipse at 5% 42%,rgba(28,89,143,.17),transparent 32%),linear-gradient(180deg,#071426 0%,#08182a 48%,#06111f 100%);line-height:1.9}
+body:before{opacity:.1;background-size:64px 64px}
+#omdany-particle-bg{opacity:.45}
+.w{width:min(1220px,100%);padding-inline:clamp(16px,3vw,34px)}
+header{background:rgba(5,17,31,.88);border-bottom:1px solid rgba(72,216,232,.18);box-shadow:0 8px 30px rgba(0,0,0,.12)}
+header .w{min-height:82px;gap:20px}
+.brand{font-size:21px;gap:9px}
+.brand img{width:44px;height:44px}
+nav{gap:clamp(12px,1.7vw,24px);font-size:13px;color:#c2d2e1}
+nav a{white-space:nowrap}
+nav a:hover{color:var(--cy)}
+.btn{background:linear-gradient(135deg,#8af1f0,#39c5d7);color:#05202a;border:1px solid rgba(170,255,255,.55);border-radius:12px;padding:12px 20px;box-shadow:0 8px 24px rgba(28,183,204,.16);font-weight:700}
+.btn.o{background:rgba(13,37,57,.8);color:#8beaf0;border-color:rgba(72,216,232,.38)}
+.btn:focus-visible,select:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid #7ef5f4;outline-offset:3px}
+.menu-toggle{display:none;width:44px;height:42px;border:1px solid rgba(72,216,232,.28);border-radius:11px;background:#10283d;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.menu-toggle span{display:block;width:19px;height:2px;background:#8beaf0;border-radius:3px}
+.hero{min-height:610px;padding:84px 0 86px;gap:clamp(30px,5vw,70px);grid-template-columns:1.02fr .98fr}
+.hero-brandmark{width:clamp(92px,10vw,126px);padding:10px;border-radius:26px;background:linear-gradient(145deg,#14344c,#0a1c2f);border-color:rgba(72,216,232,.4);box-shadow:0 18px 48px rgba(0,0,0,.25),0 0 38px rgba(37,188,211,.12)}
+.hero-brandmark:after{background:#0b1d32;color:#8beaf0}
+.slogan{background:rgba(24,105,121,.17);border-color:rgba(72,216,232,.28);color:#8beaf0}
+.hero h1{font-size:clamp(36px,4.6vw,58px);line-height:1.35;max-width:690px}
+.hero h1 em{color:#78e8eb}
+.hero p{font-size:17px;line-height:2;color:#b9cad9}
+.cta{gap:12px}
+.pick{background:linear-gradient(150deg,rgba(16,39,60,.98),rgba(8,24,40,.98));border:1px solid rgba(72,216,232,.24);border-radius:22px;padding:clamp(22px,3vw,32px);box-shadow:0 28px 80px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.045)}
+.pick h2{font-size:22px}
+.pick h2:after{background:linear-gradient(90deg,#48d8e8,transparent);height:3px}
+label{color:#d2e0eb}
+select,input,.market-join textarea{background:#091a2b;border-color:#29445b;color:#f4f8fc;border-radius:11px}
+select:hover,input:hover,select:focus,input:focus,.market-join textarea:focus{border-color:#38c5d6;box-shadow:0 0 0 3px rgba(72,216,232,.09)}
+#res{background:rgba(5,18,31,.8);border-color:rgba(72,216,232,.22);border-radius:13px}
+#res h3{color:#8beaf0}
+section{padding:82px 0;border-top:1px solid rgba(151,190,220,.12)}
+section h2{font-size:clamp(27px,3.2vw,37px);margin-bottom:30px}
+section h2:after{width:64px;background:linear-gradient(90deg,#48d8e8,rgba(72,216,232,0))}
+.g{gap:18px}
+.c{background:linear-gradient(145deg,rgba(16,39,60,.9),rgba(8,24,40,.94));border:1px solid rgba(151,190,220,.15);border-radius:17px;padding:25px;min-height:148px}
+.c:before{background:linear-gradient(180deg,#48d8e8,transparent);opacity:.85}
+.c:hover{border-color:rgba(72,216,232,.42);background:linear-gradient(145deg,rgba(19,53,75,.98),rgba(8,24,40,.98));box-shadow:0 16px 36px rgba(0,0,0,.16)}
+.c h3{font-size:18px}
+.c p{line-height:1.9}
+.c .t,.market-category,.modal-tag{color:#8beaf0;background:rgba(24,105,121,.2);border-color:rgba(72,216,232,.2)}
+.gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.gallery-card{border-radius:17px;background:linear-gradient(145deg,#10243a,#091a2b);border-color:rgba(151,190,220,.16)}
+.gallery-card img{height:205px;object-fit:cover;transition:transform .35s ease}
+.gallery-card:hover img{transform:scale(1.035)}
+.gallery-card div{padding:16px 17px 18px}
+.gallery-card h3{font-size:16px}
+.gallery-card p{line-height:1.7}
+.gallery-card .open-hint{color:#83e8ed}
+.market-card{border-radius:18px;background:linear-gradient(145deg,#10243a,#091a2b);border-color:rgba(151,190,220,.17);padding:24px}
+.market-logo{background:#0a1a2b;border-color:rgba(72,216,232,.2)}
+.market-intro{line-height:2;color:#b9cad9}
+.market-tools{margin:0 0 24px}
+.market-search{min-height:48px}
+.offer{background:linear-gradient(135deg,rgba(16,53,73,.94),rgba(8,24,40,.97));border-color:rgba(72,216,232,.27);border-radius:20px}
+.offer-card{background:rgba(5,18,31,.52);border-color:rgba(151,190,220,.17);border-radius:15px}
+.offer-card h3{color:#8beaf0}
+.wrap{border-color:rgba(151,190,220,.18);background:rgba(8,24,40,.75)}
+th{background:rgba(22,89,108,.25);color:#8beaf0}
+td,th{border-bottom-color:rgba(151,190,220,.13)}
+details{background:linear-gradient(120deg,rgba(16,39,60,.9),rgba(8,24,40,.9));border-color:rgba(151,190,220,.16);border-radius:15px;padding:18px 21px}
+details[open],details:hover{border-color:rgba(72,216,232,.4)}
+summary:after{color:#8beaf0}
+details p{line-height:1.9}
+.app-modal{background:linear-gradient(145deg,#102b43,#071829);border-color:rgba(72,216,232,.32);border-radius:22px}
+.app-modal h2:after{background:#48d8e8}
+.modal-close{background:#0b2034;color:#8beaf0;border-color:rgba(72,216,232,.25)}
+footer{background:#050f1c;border-top-color:rgba(72,216,232,.17);padding:38px 0}
+.whatsapp-float{right:auto;left:22px;bottom:22px;background:#20bf70}
+.market-empty{border-color:rgba(72,216,232,.28)}
+.note,.market-disclaimer{color:#9fb4c7}
+@media(max-width:1050px){header .w{gap:13px}.brand{font-size:18px}.brand img{width:38px;height:38px}nav{gap:12px;font-size:12px}.header-cta{padding:10px 13px;font-size:13px}.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){
+ header .w{min-height:70px;display:flex;justify-content:space-between;gap:10px}
+ .menu-toggle{display:flex;order:3;flex:0 0 44px}
+ .header-cta{order:2;margin-inline-start:auto}
+ nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;padding:12px 18px 18px;background:rgba(5,17,31,.98);border-bottom:1px solid rgba(72,216,232,.2);box-shadow:0 18px 32px rgba(0,0,0,.28);flex-direction:column;gap:0;z-index:40}
+ nav.is-open{display:flex}
+ nav a{padding:12px 8px;border-bottom:1px solid rgba(151,190,220,.1);font-size:14px}
+ nav a:last-child{border-bottom:0}
+ .hero{padding:52px 0 56px;grid-template-columns:1fr;gap:28px}
+ .hero-brandmark{width:98px;margin-bottom:20px}
+ .hero h1{font-size:clamp(34px,8vw,48px)}
+ section{padding:60px 0}
+ .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gallery-card img{height:180px}
+}
+@media(max-width:480px){
+ .brand{font-size:16px}.brand img{width:34px;height:34px}
+ .header-cta{font-size:12px;padding:9px 10px}
+ .menu-toggle{width:40px;height:40px;flex-basis:40px}
+ .w{padding-inline:15px}
+ .hero{padding-top:40px}
+ .hero h1{font-size:34px}
+ .hero p{font-size:15px}
+ .cta .btn{width:100%}
+ .pick{padding:18px}
+ .g,.gallery-grid{grid-template-columns:1fr}
+ .gallery-card img{height:190px}
+ section{padding:50px 0}
+ .market-card{padding:18px}
+ .whatsapp-float{left:14px;right:auto;bottom:16px;width:54px;height:54px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
