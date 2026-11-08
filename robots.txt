@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ae7656714-jpg.github.io/omda-ny-tech/sitemap.xml
