@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ae7656714-jpg.github.io/omda-ny-tech/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ae7656714-jpg.github.io/omda-ny-tech/systems/accounting.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ae7656714-jpg.github.io/omda-ny-tech/systems/custom.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ae7656714-jpg.github.io/omda-ny-tech/systems/mobile-apps.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ae7656714-jpg.github.io/omda-ny-tech/systems/websites.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
